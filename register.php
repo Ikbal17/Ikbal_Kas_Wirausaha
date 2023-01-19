@@ -14,11 +14,12 @@
 <form action="POST">
   <div class="mb-3">
     <input placeholder="Email/Username" type="email" class="input1" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input placeholder="Email/Username" type="email" class="input1" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <input placeholder="Password" type="password" class="input2" id="exampleInputPassword1">
   </div>
-  <a href="" class="creat-akun">Buat Akun</a>
+  <a href="register.php" class="creat-akun">Buat Akun</a>
   <button type="submit" class="button">Login</button>
 </form>
 

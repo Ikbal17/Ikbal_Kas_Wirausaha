@@ -1,3 +1,83 @@
 body{
     background-color: #64A7F5;
 }
+
+h1{
+    position: absolute;
+    width: 156px;
+    height: 63px;
+    left: 40%;
+    top: 25%;
+    
+    font-family: ubuntu;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 73px;
+}
+
+.input1{
+    position: absolute;
+width: 494px;
+height: 61px;
+left: 28%;
+top: 45%;
+border: 1px solid #000000;
+background: #D9D9D9;
+border-radius: 19px;
+}
+
+.input2{
+    position: absolute;
+width: 494px;
+height: 61px;
+left: 28%;
+top: 60%;
+border: 1px solid #000000;
+background: #D9D9D9;
+border-radius: 19px;
+}
+
+
+
+
+.creat-akun{
+    position: absolute;
+width: 90px;
+height: 23px;
+left: 58%;
+top: 76%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 19px;
+line-height: 23px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.button{
+    box-sizing: border-box;
+
+position: absolute;
+width: 105px;
+height: 39px;
+left: 28%;
+top: 75%;
+
+background: #D9D9D9;
+border: 1px solid #000000;
+border-radius: 15px;
+}
+
+.logo{
+    position: absolute;
+    height: 30%;
+    left: 35%;
+top: 2%;
+
+}

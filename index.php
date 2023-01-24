@@ -6,7 +6,7 @@ include "bot.php";
 session_start();
   $username = 'admin';
   $password = 'admin';
-  if (isset($_POST['submit'])) {
+  if (isset($_POST["submit"])) {
     if ($_POST['username'] == $username && $_POST['password'] == $password){
       $_SESSION["username"] == $username;
       echo "anda berhasil login $username";

@@ -3,7 +3,7 @@
 include "bot.php";
 ?>
 
-<nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block sidebar collapse side" style="position: relative;">
+<nav id="sidebarMenu" class="text-color-black col-md-2 col-lg-2 d-md-block sidebar collapse side" style="position: relative;">
           <div class="navbar-toggler">
             <a class="navbar-brand" href="#"><img src="assets/brand_img" alt=""></a>
             <ul class="navbar-nav flex-column" style=" padding-bottom: 128%; color:#0000;">

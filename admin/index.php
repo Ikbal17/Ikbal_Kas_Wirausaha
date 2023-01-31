@@ -1,6 +1,17 @@
 <?php
 
 include "../bot.php";
+session_start();
+
+if ($_SESSION['level']= "") {
+  header("location:../index.php");
+}
+
+if ($_SESSION ['level'] == "admin") {
+  header("location: ../admin/index.php");
+}
+
+echo $_SESSION['level'];
 ?>
 
 <nav id="sidebarMenu" class="text-color-black col-md-2 col-lg-2 d-md-block sidebar collapse side" style="position: relative;">
@@ -41,6 +52,9 @@ include "../bot.php";
                   <a class="dropdown-item" href="https://wa.me/6283829667585">Whatsapp</a>
                   <a class="dropdown-item" href="https://www.facebook.com/Dik1707">Facebook</a>
               </li>
+              <li class="nav-item">
+              <a href="../logout.php">logout</a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -52,4 +66,7 @@ left: 10%;
 top: 0px;
 
 border: 1px solid #000000;
-"></div>
+">
+
+
+</div>

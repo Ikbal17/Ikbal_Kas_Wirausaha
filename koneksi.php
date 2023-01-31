@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost: 3306";
+$servername = "localhost";
 $username = "root";
 $password = "";
 $database = "db_ujikom";

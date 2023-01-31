@@ -30,17 +30,24 @@ $password = $_POST['password'];
  
 // menyeleksi data admin dengan username dan password yang sesuai
 
-$sql = "SELECT username,password FROM tb_login";
+$sql = "SELECT * FROM tb_user WHERE Username='$username' and Password=md5('$password')";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    $_SESSION['username'] = $username;
-	$_SESSION['status'] = "login";
-	header("location:admin/index.php");
+    if ($row['role'] == "admin") {
+      $_SESSION['username'] = $username;
+      $_SESSION['level'] = "admin";
+      header("location:admin/index.php");
+    } elseif ($row['role'] == "petugas") {
+      $_SESSION['username'] = $username;
+      $_SESSION['level'] = "petugas";
+      header("location: petugas/index.php");
+    }
+   
   }
-} else {
+}else {
 	header("location:index.php?pesan=gagal");
 }
 $conn->close();

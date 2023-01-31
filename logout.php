@@ -1,11 +1,11 @@
 
 <?php 
 // // mengaktifkan session
-// session_start();
+session_start();
  
 // menghapus semua session
 session_destroy();
  
 // mengalihkan halaman sambil mengirim pesan logout
-header("location:PROJECT/index.php?pesan=logout");
+header("location:../project/index.php");
 ?>

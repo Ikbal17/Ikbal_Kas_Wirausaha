@@ -14,6 +14,8 @@ if ($_SESSION ['level'] == "admin") {
 echo $_SESSION['level'];
 ?>
 
+<section>
+
 <nav id="sidebarMenu" class="text-color-black col-md-2 col-lg-2 d-md-block sidebar collapse side" style="position: relative;">
           <div class="navbar-toggler">
             <a class="navbar-brand" href="#"><img src="assets/brand_img" alt=""></a>
@@ -59,6 +61,8 @@ echo $_SESSION['level'];
           </div>
         </nav>
 
+</section>
+
         <div style="position: absolute;
 width: 0%;
 height: 100%;
@@ -70,3 +74,22 @@ border: 1px solid #000000;
 
 
 </div>
+
+<?php
+if (isset($_GET['admin'])) {
+  $page = $_GET['admin'];
+
+  switch ($page) {
+    case 'tamah':
+      include "tambah.php";
+      break;
+    case 'update':
+      include "delet.php";
+      break;
+    case 'delete':
+      include "update.php";
+      break;
+  }
+}
+
+?>

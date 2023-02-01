@@ -3,16 +3,6 @@ include "../bot.php";
 include "../koneksi.php";
 
 session_start();
-
-if ($_SESSION['level']= "") {
-  header("location:../index.php");
-}
-
-if ($_SESSION ['level'] == "petugas") {
-  header("location: ../petugas/index.php");
-}
-
-echo $_SESSION['level'];
 ?>
 
 <a href="tambah.php"><button>Tambahan</button></a>
@@ -24,6 +14,7 @@ echo $_SESSION['level'];
         <td>PENGELUARAN</td>
         <td>KETERANGAN</td>
         <td>JUMLAH</td>
+        <td>ACTION</td>
     </tr>
     <?php
     $sql = "SELECT * FROM tb_kas";
@@ -39,6 +30,7 @@ echo $_SESSION['level'];
             <td><?php echo $row['Pengeluaran']?></td>
             <td><?php echo $row['Keterangan']?></td>
             <td><?php echo $row['Jumlah']?></td>
+            <td><a href="update.php"><?php echo $row['No'];?></a></td>
         </tr>
 <?php
     }

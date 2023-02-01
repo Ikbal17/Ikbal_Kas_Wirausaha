@@ -8,7 +8,7 @@ if ($_SESSION['level']= "") {
 }
 
 if ($_SESSION ['level'] == "admin") {
-  header("location: ../admin/index.php");
+  header("location: ../admin/dash.php");
 }
 
 echo $_SESSION['level'];

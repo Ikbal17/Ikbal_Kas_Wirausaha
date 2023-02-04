@@ -3,7 +3,9 @@
 include "bot.php";
 ?>
 
-  
+  <link rel="stylesheet" href="patch/style.css" type="text/css">
+  <body style="background-color:  #64A7F5;">
+
    <img class="logo" src="image/logo.png" alt=""><br><br><br><br>
   <br>
 <h1>Login</h1>
@@ -12,6 +14,6 @@ include "bot.php";
       <input placeholder="Password" type="password" class="input2" id="password" name="password">
     <input type="submit" name="submit" class="button" value="Login">
   </form>
-  
+  </body>
 
  

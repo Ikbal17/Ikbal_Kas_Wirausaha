@@ -2,18 +2,32 @@
 
 include "bot.php";
 ?>
+ 
+ <link rel="stylesheet" href="patch/style.css" type="text/css">
+  <body style="background: #64A7F5;">
 
-  <link rel="stylesheet" href="patch/style.css" type="text/css">
-  <body style="background-color:  #64A7F5;">
+  <div class="row">
+    <div class="col-md-4 offset-md-4 my-5">
+    <div class="text-center">
+  <img src="image/1.png" class="rounded">
+  <h1>Login</h1>
+</div>
+<!-- login -->
+  <form action="cek_login.php" method="post">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Username</label>
+    <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <input type="submit" value="Login" class="btn btn-primary">
+</form>
 
-   <img class="logo" src="image/logo.png" alt=""><br><br><br><br>
-  <br>
-<h1>Login</h1>
-    <form action="cek_login.php" method='post'>
-      <input placeholder="Email/Username" type="text" class="input1" id="username" name="username">
-      <input placeholder="Password" type="password" class="input2" id="password" name="password">
-    <input type="submit" name="submit" class="button" value="Login">
-  </form>
-  </body>
 
+</div>
+  </div>
+  
+</body>
  

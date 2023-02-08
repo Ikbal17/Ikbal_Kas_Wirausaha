@@ -1,0 +1,33 @@
+#content{
+
+}
+#sidebar{
+    position: fixed;
+    height: 100%;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+
+nav{
+    background-color: #64A7F5;
+    position: fixed;
+    left: 250px;
+    width: 100%;
+  
+}
+
+nav h3{
+    margin-left: 3px;
+}
+
+p{
+    color: black;
+    display: inline;
+}
+
+li{
+    color: black;
+    display: inline;
+}

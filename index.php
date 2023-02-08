@@ -1,6 +1,6 @@
 <?php
 
-include "bot.php";
+include "header.php";
 ?>
  
  <link rel="stylesheet" href="patch/style.css" type="text/css">
@@ -31,3 +31,6 @@ include "bot.php";
   
 </body>
  
+<?php
+include "footer.php";
+?>

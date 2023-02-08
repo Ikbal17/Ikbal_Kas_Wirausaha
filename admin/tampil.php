@@ -1,5 +1,4 @@
 <?php
-include "../bot.php";
 include "../koneksi.php";
 
 session_start();
@@ -38,3 +37,7 @@ session_start();
 </table>
 
 <br>              <a href="../logout.php">logout</a>
+
+<?php
+include "footer.php";
+?>

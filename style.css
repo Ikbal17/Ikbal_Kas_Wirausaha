@@ -1,10 +1,7 @@
-#content{
 
-}
-#sidebar{
+/* #sidebar{
     position: fixed;
-    height: 100%;
-}
+} */
 body{
     font-family: 'Times New Roman', Times, serif;
     font-weight: 400;
@@ -13,7 +10,6 @@ body{
 nav{
     background-color: #64A7F5;
     position: fixed;
-    left: 250px;
     width: 100%;
   
 }
@@ -30,4 +26,45 @@ p{
 li{
     color: black;
     display: inline;
+}
+.kotak1{
+    width: 269px;
+    height: 135px;
+    /* left: 10%;
+    top: 40%; */
+    
+    background: #C072CD;
+    border-radius: 20px;
+}
+
+.kotak2{
+width: 269px;
+height: 135px;
+/* left: 322px; */
+
+background: #6CC27A;
+border-radius: 20px;
+}
+
+.kotak3{
+width: 269px;
+height: 135px;
+/* left: 655px;
+top: 40%; */
+
+background: #E8B598;
+border-radius: 20px;
+}
+
+.g1{
+  position: absolute;
+  left: 60%;
+  top: 25%;
+}
+
+h4{
+    position: absolute;
+    font-weight: bold;
+    top: 80px;
+    left: 40px;
 }

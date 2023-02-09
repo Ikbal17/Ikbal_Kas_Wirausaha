@@ -19,53 +19,9 @@ echo $_SESSION['level'];
 
 <link rel="stylesheet" href="../style.css" type="text/css">
 
-  <section id="sidebar">
-  <!-- <div class="sidebar " style="  border-right: 1px solid black;">
+  <!-- <section id="sidebar"> -->
 
-      <div style="width:15%;">
-       <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block sidebar collapse " style="color: black;">
-       <a class="navbar-brand" href="#"><img class="images" src="../img/profile.png " width="200%" alt=""></a>
-          <div class="sidebar-sticky pt-3">
-            <ul class="navbar-nav px-3 flex-column" style="margin-top:20% ;">
-              <li class="nav-item ">
-                <a class="nav-link d-flex align-items-center" href="index.php?page=home" role="button" data-toggle="dropdown" aria-expanded="false" style="color:black;">
-                  <img src="../img/home 2.png" class="icon" alt="" /> Home
-                </a>
-             
-              </li>
-              <li class="nav-item">
-                <a class="nav-link d-flex align-items-center" href="index.php?page=Buku" style="color:black;">
-                  <img src="../img/laporan 2.png" alt="" class="icon" />
-                    Buku<span class="px-1">Kas</span>
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;"><img src="../img/umum.png" alt="" >
-            Laporan 
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#" style="color:black;"> >Laporan Harian</a></li>
-            <li><a class="dropdown-item" href="#" style="color:black;">  >Laporan Mingguan</a></li>
-            <li><a class="dropdown-item" href="#" style="color:black;"> >Laporan Bulanan </a></li>
-          </ul>
-        </li>
-           
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="form">Form</a>
-                  <a class="dropdown-item" href="https://wa.me/6285861880292">Whatsapp</a>
-                  <a class="dropdown-item" href="https://www.instagram.com/diirapril28_/?next=%2F">Instagram</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a  href="../logout.php"><img src="../img/logout.png" alt=""> logout </a>
-              </li>
-            </ul>
-
-            
-          </div>
-        </nav> -->
-
-        <div class="d-flex flex-column flex-shrink-0 p-3 overflow-auto shadow" style="width: 250px; background-color: #64A7F5; height: 100%;">
+        <!-- <div class="d-flex flex-column flex-shrink-0 p-3 overflow-auto shadow" style="width: 250px; background-color: #64A7F5; height: 100%;">
     <a class="navbar-brand"><img src="../image/person.png" alt=""></a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto ">
@@ -107,20 +63,78 @@ echo $_SESSION['level'];
     </ul>
   
   </div>
-      </section>
+  </section> -->
+
+      <header>
       <section id="content">
         <nav class="shadow">
           <div>
-            <h3 class="mx-5">Buku kas kelas</h3>
+            <h3 class="" style="margin-left: 270px;">Buku kas kelas</h3>
           </div>
-          
-       </nav>
-       
-      </section>
-        <main>
+          <!-- tombol side -->
+          <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><img src="../image/2.png" alt=""></span>
+  </button><button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><img src="../image/2.png" alt=""></span>
+  </button>
+  <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse py-5" style="width: 250px; background-color: #64A7F5; height: 100%;">
+      <div class="position-sticky pt-3 sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.php?page=home">
+             <img src="../image/home.png" alt="">
+              <p>Beranda</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?page=Pemasukan">
+              <img src="../image/masuk.png" alt="">
+              <p>Pemasukan</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?page=Pengeluaran">
+             <img src="../image/keluar.png" alt="">
+              <p>Pengeluaran</p>
+            </a>
+          </li>
+          <div class="dropdown px-1">
+  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+   <img src="../image/laporan.png" alt=""><p>Laporan</p>
+  </button>
+  <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div><br><br><br><br>
+          <hr>
+          <li class="nav-item">
+            <a class="nav-link" href="../logout.php">
+             <img src="../image/logout.svg" alt="">
+              <p>logout</p>
+            </a>
+          </li>
+        </ul>
 
     
-<?php
+        </ul>
+      </div>
+    </nav>
+       </nav>
+       
+  </section>
+     
+      </header>
+        <!-- sidebar -->
+
+       
+
+    
+    <main class="col-md-9 ms-auto col-lg-10 px-md-4 pt-5">
+        
+
+      <?php
 if (isset($_GET['page'])) {
   $page = $_GET['page'];
 
@@ -144,7 +158,9 @@ if (isset($_GET['page'])) {
 ?>
 </main>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
 <?php
 include "../footer.php";

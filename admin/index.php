@@ -19,51 +19,7 @@ echo $_SESSION['level'];
 
 <link rel="stylesheet" href="../style.css" type="text/css">
 
-  <!-- <section id="sidebar"> -->
 
-        <!-- <div class="d-flex flex-column flex-shrink-0 p-3 overflow-auto shadow" style="width: 250px; background-color: #64A7F5; height: 100%;">
-    <a class="navbar-brand"><img src="../image/person.png" alt=""></a>
-    <hr>
-    <ul class="nav nav-pills flex-column mb-auto ">
-      <li class="nav-item">
-        <a href="index.php?page=home" class="nav-link" aria-current="page">
-          <img src="../image/home.png" alt=""><use xlink:href="index.php?page=home"></use></svg>
-          <p>Beranda</p>
-        </a>
-      </li>
-      <li>
-        <a href="index.php?page=Pemasukan" class="nav-link link-dark">
-          <img src="../image/masuk.png" alt=""><use xlink:href="index.php?page=Pemasukan"></use></svg>
-          <P>Pemasukan</P>
-        </a>
-      </li>
-      <li>
-        <a href="index.php?page=Pengeluaran" class="nav-link link-dark">
-          <img src="../image/keluar.png" alt=""><use xlink:href="index.php?page=Pengeluaran"></use></svg>
-          <p>Pengeluaran</p>
-        </a>
-      </li>
-      <div class="dropdown px-1">
-  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-   <img src="../image/laporan.png" alt=""><p>Laporan</p>
-  </button>
-  <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
-</div><br><br><br><br>
-<hr>
-      <li>
-        <a href="../logout.php" class="nav-link link-dark">
-        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h14.55v3H9v30h14.55v3Zm24.3-9.25-2.15-2.15 5.1-5.1h-17.5v-3h17.4l-5.1-5.1 2.15-2.15 8.8 8.8Z"/></svg><use xlink:href="#people-circle"></use>
-          logout
-        </a>
-      </li>
-    </ul>
-  
-  </div>
-  </section> -->
 
       <header>
       <section id="content">
@@ -98,16 +54,19 @@ echo $_SESSION['level'];
               <p>Pengeluaran</p>
             </a>
           </li>
+
           <div class="dropdown px-1">
   <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
    <img src="../image/laporan.png" alt=""><p>Laporan</p>
   </button>
-  <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="index.php?page=lapor">Laporan harian</a></li>
+    <li><a class="dropdown-item" href="#">Laporan mingguan</a></li>
+    <li><a class="dropdown-item" href="#">Laporan bulanan</a></li>
   </ul>
-</div><br><br><br><br>
+</div>
+
+<br><br><br><br>
           <hr>
           <li class="nav-item">
             <a class="nav-link" href="../logout.php">
@@ -131,7 +90,7 @@ echo $_SESSION['level'];
        
 
     
-    <main class="col-md-9 ms-auto col-lg-10 px-md-4 pt-5">
+<main class="col-md-9 ms-auto col-lg-10 px-md-4 pt-5">
         
 
       <?php
@@ -147,6 +106,15 @@ if (isset($_GET['page'])) {
       break;
     case "Pengeluaran":
       include "kurang.php";
+      break;
+    case "lapor":
+      include "tampil.php";
+      break;
+    case "edit":
+      include "update.php";
+      break;
+    case "delete":
+      include "delet.php";
       break;
     default:
     echo "halam ini gak ada";

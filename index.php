@@ -26,7 +26,7 @@ include "header.php";
         </li>
       </ul>
       <div class="offset-7">
-      	           <a href="#"><input type="submit" value="Sign Up" class="btn"></a>
+      	           <a href="daftar.php"><input type="submit" value="Sign Up" class="btn"></a>
       </div>
       <div class="ms-1">
       	           <a href="login.php"><input type="submit" value="Login" class="btn btn-outline-dark"></a>
@@ -39,7 +39,7 @@ include "header.php";
 	<div class="col">
 		<h1 class="fw-bold" style="font-family: sans-serif;">Mempermudah pencatatan keuangan untuk para wirausahawan </h1><br>
 		<p style="font-family: sans-serif;">Miliki akses dengan gratis tanpa pungutan biaya apapun dan bisa diakses dimanapun kapanpun</p><br><br>
-		<button class="btn btn-dark" style="font-family: sans-serif;">Get Started</button>
+	<a href="login.php">	<button class="btn btn-dark" style="font-family: sans-serif;">Get Started</button></a>
 	</div>
 	<div class="col">
 		<img class="offset-3" src="image/ds1.png" height="120%">
@@ -47,20 +47,7 @@ include "header.php";
 </div>
 </div>
 <!-- Konten 2 -->
-<section id="fitur">
-	<div class="row">
-		<div class="col">
-			<img src="image/deviece.png"><br>
 
-		</div>
-		<div class="col">
-			
-		</div>
-		<div class="col">
-			
-		</div>
-	</div>
-</section>
 </body>
 
 <?php 

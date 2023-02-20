@@ -4,8 +4,8 @@ include "../header.php";
 if (isset($_POST['add'])) {
     $name = $_POST['name'];
     $date = $_POST['date'];
-    $input = $_POST['input'];
-    $information = $_POST['information'];
+    $input = $_POST['saldo'];
+    $information = $_POST['description'];
 
     $add = "INSERT INTO tb_kas (name, date, input, information)
     VALUES ('$name','$date', '$input','$information')";
@@ -22,16 +22,12 @@ if (isset($_POST['add'])) {
     <input type="text" class="form-control" id="inputEmail4" name="name" pla>
   </div>
   <div class="col-6">
-    <label for="inputPassword4" class="form-label">Tanggal Masuk</label>
-    <input type="date" class="form-control" id="inputPassword4" name="date">
-  </div>
-  <div class="col-6">
-    <label for="inputAddress" class="form-label">Pemasukan</label>
-    <input type="text" class="form-control" id="inputAddress" name="input">
+    <label for="inputAddress" class="form-label">Keterangan</label>
+    <input type="text" class="form-control" id="inputAddress" name="information" style="height: 75px;">
   </div>
   <div class="col-6">
     <label for="inputAddress2" class="form-label">Keterangan</label>
-    <input type="text" class="form-control" id="inputAddress2" name="information">
+    <input type="text" class="form-control" id="inputAddress2" name="input">
   </div>
 
   <div class="">

@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include "../koneksi.php";
 include "../header.php";
 $id = $_GET['id'];
@@ -67,9 +68,8 @@ if (isset($_POST['edit'])) {
     $update =  $conn->query("UPDATE tb_kas SET id='$id', name='$name', date='$date',
     input='$output', Information='$Information', total='$total'WHERE id='$id'");
     if ($update) {
-        header('location:index.php');
-    }else {
-        echo "maaf gagal merubah data";
+        header("location:index.php?page=lapor");
+        ob_end_flush();
     }
 }
 ?>

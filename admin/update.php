@@ -6,7 +6,6 @@ $id = $_GET['id'];
 $sql = "SELECT * FROM tb_kas WHERE id='$id'";
 $edit = $conn->query($sql);
 ?>
-<form action="" method="post">
 
 
 <?php

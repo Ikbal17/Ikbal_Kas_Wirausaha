@@ -33,7 +33,7 @@ echo $_SESSION['level'];
   </button><button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"><img src="../image/2.png" alt=""></span>
   </button>
-  <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse py-5" style="width: 250px; background-color: #64A7F5; height: 100%;">
+  <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block sidebar collapse py-5" style="width: 200px; background-color: #64A7F5; height: 100%;">
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -60,7 +60,7 @@ echo $_SESSION['level'];
    <img src="../image/laporan.png" alt=""><p>Laporan</p>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="index.php?page=lapor">Laporan harian</a></li>
+    <li><a class="dropdown-item" href="index.php?page=saldo">Laporan harian</a></li>
     <li><a class="dropdown-item" href="#">Laporan mingguan</a></li>
     <li><a class="dropdown-item" href="#">Laporan bulanan</a></li>
   </ul>
@@ -90,7 +90,7 @@ echo $_SESSION['level'];
        
 
     
-<main class="col-md-9 ms-auto col-lg-10 px-md-4 pt-5">
+<main class="col-md-10 ms-auto col-lg-10 px-md-5 pt-5">
         
 
       <?php
@@ -102,19 +102,25 @@ if (isset($_GET['page'])) {
       include "home.php";
       break;
     case "Pemasukan":
-      include "tambah.php";
+      include "tampil_in.php";
       break;
     case "Pengeluaran":
-      include "kurang.php";
+      include "tampil_out.php";
       break;
-    case "lapor":
-      include "tampil.php";
+    case "Masuk":
+      include "tambah.php";
+      break;
+    case "Keluar":
+      include "kurang.php";
       break;
     case "edit":
       include "update.php";
       break;
     case "delete":
       include "delet.php";
+      break;
+    case "saldo":
+      include "saldo.php";
       break;
     default:
     echo "halam ini gak ada";

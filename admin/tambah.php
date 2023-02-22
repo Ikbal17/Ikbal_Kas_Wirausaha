@@ -13,20 +13,25 @@ if (isset($_POST['add'])) {
   }
 }
 ?>
-
+<a href=""></a>
 <div class="col-8 ms-5 pt-5 ps-5">
 <form class="row g-3" action="" method="post">
-  <div class="col-6">
+
+ <div class="col-6">
+ <div class="col-12">
     <label for="inputEmail4" class="form-label">Nama</label>
     <input type="text" class="form-control" id="inputEmail4" name="name" pla>
   </div>
-  <div class="col-6">
+
+  <div class="col-12">
     <label for="inputAddress" class="form-label">Pemasukan</label>
     <input type="text" class="form-control" id="inputAddress" name="saldo">
   </div>
+ </div>
+
   <div class="col-6">
     <label for="inputAddress2" class="form-label">Keterangan</label>
-    <input type="text" class="form-control" id="inputAddress2" name="description">
+    <textarea class="form-control" id="inputAddress2" name="description" cols="20" rows="4"></textarea>
   </div>
 
   <div class="">

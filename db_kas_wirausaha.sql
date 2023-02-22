@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 17 Feb 2023 pada 02.45
--- Versi server: 10.4.22-MariaDB
--- Versi PHP: 8.1.1
+-- Waktu pembuatan: 22 Feb 2023 pada 05.21
+-- Versi server: 10.4.24-MariaDB
+-- Versi PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,17 +30,10 @@ SET time_zone = "+00:00";
 CREATE TABLE `tb_addmision_fee` (
   `id` int(11) NOT NULL,
   `name` varchar(45) NOT NULL,
-  `date` date NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp(),
   `saldo` double NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `tb_addmision_fee`
---
-
-INSERT INTO `tb_addmision_fee` (`id`, `name`, `date`, `saldo`, `description`) VALUES
-(3, 'Ikbal', '2023-01-01', 10000, 'saldo');
 
 -- --------------------------------------------------------
 
@@ -75,10 +68,17 @@ INSERT INTO `tb_kas` (`id`, `name`, `date`, `input`, `output`, `Information`, `t
 CREATE TABLE `tb_money_out` (
   `id` int(11) NOT NULL,
   `name` varchar(45) NOT NULL,
-  `date` date NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `saldo` double NOT NULL,
-  `information` text NOT NULL
+  `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tb_money_out`
+--
+
+INSERT INTO `tb_money_out` (`id`, `name`, `date`, `saldo`, `description`) VALUES
+(1, 'IKbal', '2023-02-22 03:45:04', 10000, 'naon w');
 
 -- --------------------------------------------------------
 
@@ -112,8 +112,7 @@ INSERT INTO `tb_user` (`ID`, `Name`, `No hp`, `Address`, `Username`, `Password`,
 -- Indeks untuk tabel `tb_addmision_fee`
 --
 ALTER TABLE `tb_addmision_fee`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `date_2` (`date`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `tb_kas`
@@ -125,9 +124,7 @@ ALTER TABLE `tb_kas`
 -- Indeks untuk tabel `tb_money_out`
 --
 ALTER TABLE `tb_money_out`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `date` (`date`),
-  ADD KEY `date_2` (`date`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `tb_user`
@@ -152,20 +149,16 @@ ALTER TABLE `tb_kas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT untuk tabel `tb_money_out`
+--
+ALTER TABLE `tb_money_out`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
---
-
---
--- Ketidakleluasaan untuk tabel `tb_money_out`
---
-ALTER TABLE `tb_money_out`
-  ADD CONSTRAINT `tb_money_out_ibfk_1` FOREIGN KEY (`date`) REFERENCES `tb_addmision_fee` (`date`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

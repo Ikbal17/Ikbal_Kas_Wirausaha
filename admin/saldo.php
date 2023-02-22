@@ -2,13 +2,16 @@
 include "../koneksi.php";
 include "../header.php";
 
-$sql= "SELECT SUM(saldo) FROM tb_addmision_fee";
 ?>
 
 <div class="row pt-5" >
-
+    <?php
+        $result = mysqli_query($conn, 'SELECT SUM(saldo) AS saldo FROM tb_addmision_fee'); 
+        $row = mysqli_fetch_assoc($result); 
+        $sum = $row['saldo'];
+    ?>
     <div class="col-lg-6">
-        <p class="m-3">Total Pemasukan : <?php echo?></p>
+        <p class="m-3">Total Pemasukan : <?php echo $sum ?></p>
     <table class="table table-striped table-hover m-3">
         
     <tr>

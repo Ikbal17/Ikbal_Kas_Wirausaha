@@ -90,7 +90,7 @@ echo $_SESSION['level'];
        
 
     
-<main class="col-md-10 ms-auto col-lg-10 px-md-5 pt-5">
+<main class="col-md-10 ms-auto col-lg-10 px-md-4 pt-5">
         
 
       <?php

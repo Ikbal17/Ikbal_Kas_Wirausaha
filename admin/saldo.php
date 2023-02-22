@@ -2,13 +2,12 @@
 include "../koneksi.php";
 include "../header.php";
 
-$sql= "SELECT SUM(saldo) FROM tb_addmision_fee";
 ?>
 
 <div class="row pt-5" >
 
     <div class="col-lg-6">
-        <p class="m-3">Total Pemasukan : <?php echo?></p>
+        <p class="m-3">Total Pemasukan :</p>
     <table class="table table-striped table-hover m-3">
         
     <tr>

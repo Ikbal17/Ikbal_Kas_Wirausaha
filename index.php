@@ -25,10 +25,7 @@ include "header.php";
           <a class="nav-link" href="#">Disabled</a>
         </li>
       </ul>
-      <div class="offset-7">
-      	           <a href="daftar.php"><input type="submit" value="Sign Up" class="btn"></a>
-      </div>
-      <div class="ms-1">
+      <div class="ms-auto pe-5">
       	           <a href="login.php"><input type="submit" value="Login" class="btn btn-outline-dark"></a>
       </div>
     </div>

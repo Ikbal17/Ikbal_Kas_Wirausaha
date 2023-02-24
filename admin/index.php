@@ -113,8 +113,11 @@ if (isset($_GET['page'])) {
     case "Keluar":
       include "kurang.php";
       break;
-    case "edit":
-      include "update.php";
+    case "edit_in":
+      include "update_in.php";
+      break;
+    case "edit_out":
+      include "update_out.php";
       break;
     case "delete":
       include "delet.php";

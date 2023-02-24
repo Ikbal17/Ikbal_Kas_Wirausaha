@@ -7,5 +7,5 @@ session_start();
 session_destroy();
  
 // mengalihkan halaman sambil mengirim pesan logout
-header("location:../project/index.php");
+header("location:../Ikbal_Kas_Wirausaha/index.php");
 ?>

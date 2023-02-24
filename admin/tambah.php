@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include "../koneksi.php";
 include "../header.php";
 if (isset($_POST['add'])) {
@@ -9,7 +10,8 @@ if (isset($_POST['add'])) {
     $add = "INSERT INTO tb_addmision_fee (name, saldo, description)
     VALUES ('$name', '$input','$information')";
     if ($conn->query($add) === TRUE) {
-    echo "New record created successfully";
+   header("location: index.php?page=Pemasukan");
+   ob_end_flush();
   }
 }
 ?>

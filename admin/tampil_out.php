@@ -14,7 +14,7 @@ include "../header.php";
         <td>ACTION</td>
     </tr>
     <?php
-    $sql = "SELECT * FROM tb_money_out";
+    $sql = "SELECT * FROM tb_money_out ORDER BY id DESC";
     $result = $conn->query($sql);
     $data = 1;
     while ($row=$result->fetch_assoc()){

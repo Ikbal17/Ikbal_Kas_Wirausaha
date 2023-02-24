@@ -3,14 +3,14 @@ ob_start();
 include "../koneksi.php";
 include "../header.php";
 if (isset($_POST['add'])) {
-    $name = $_POST['name'];
-    $input = $_POST['saldo'];
-    $information = $_POST['description'];
+    $Name = $_POST['Name'];
+    $No = $_POST['No hp'];
+    $Address = $_POST['Address'];
 
-    $add = "INSERT INTO tb_money_out (name, saldo, description)
-    VALUES ('$name', '$input','$information')";
+    $add = "INSERT INTO tb_user (Name, No hp, Address)
+    VALUES ('$Name', '$No','$information')";
     if ($conn->query($add) === TRUE) {
-   header("location: index.php?page=Pengeluaran");
+   header("location: index.php?page=Pemasukan");
    ob_end_flush();
   }
 }
@@ -26,7 +26,7 @@ if (isset($_POST['add'])) {
   </div>
 
   <div class="col-12">
-    <label for="inputAddress" class="form-label">Pengeluaran</label>
+    <label for="inputAddress" class="form-label">Pemasukan</label>
     <input type="text" class="form-control" id="inputAddress" name="saldo">
   </div>
  </div>

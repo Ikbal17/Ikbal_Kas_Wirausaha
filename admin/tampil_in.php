@@ -2,9 +2,14 @@
 include "../koneksi.php";
 include "../header.php";
 ?>
-
-<div class="pt-5">
-<a href="index.php?page=Masuk" class="m-3"><button class="btn btn-primary">Tambahan Pemasukan</button></a>
+<div class="row">
+<div class="col-lg-10 pt-5">
+<a href="index.php?page=Masuk" class="m-3"><button class="btn btn-primary">Tambahan Pemasukan</button></a> 
+<?php
+        $result = mysqli_query($conn, 'SELECT SUM(saldo) AS saldo FROM tb_addmision_fee'); 
+        $row = mysqli_fetch_assoc($result); 
+        $sum = $row['saldo'];
+    ?>
 <table class="table table-striped table-hover m-3">
     <tr>
         <td>NO</td>
@@ -34,6 +39,23 @@ include "../header.php";
     }
     ?>
 </table>
+<!-- <table class="table table-striped table-hover m-3">
+    <tr>
+        <td>Total</td>
+        <td class="text-end"><?php echo $sum;?></td>
+    </tr>
+</table> -->
+
+</div>
+
+<div class="pt-5 col-lg-2 mt-5">
+<div class="card mt-1">
+      <div class="card-body">
+        <h5 class="card-title">Saldo Akhir</h5>
+        <p class="card-text"><?php echo $sum;?></p>
+      </div>
+    </div>
+</div>
 
 </div>
 <?php

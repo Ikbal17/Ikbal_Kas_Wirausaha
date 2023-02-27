@@ -3,7 +3,8 @@ include "../koneksi.php";
 include "../header.php";
 ?>
 
-<a href="index.php?page=Masuk" class="m-3"><button class="btn btn-primary">Tambahan</button></a>
+<div class="pt-5">
+<a href="index.php?page=Masuk" class="m-3"><button class="btn btn-primary">Tambahan Pemasukan</button></a>
 <table class="table table-striped table-hover m-3">
     <tr>
         <td>NO</td>
@@ -34,6 +35,7 @@ include "../header.php";
     ?>
 </table>
 
+</div>
 <?php
 include "../footer.php";
 ?>

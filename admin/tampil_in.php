@@ -32,7 +32,7 @@ include "../header.php";
             <td><?php echo $row['date']?></td>
             <td><?php echo $row['saldo']?></td>
             <td><?php echo $row['description']?></td>
-            <td><a href="index.php?page=edit_in&id=<?php echo $row['id'];?>">Edit</a>
+            <td><a href="index.php?page=edit_in&id=<?php echo $row['id'];?>"><img src="../image/edit.gif" alt=""></a>
             <a href="delet_in.php?id=<?php echo $row['id'];?>">Hapus</a></td>
         </tr>
 <?php

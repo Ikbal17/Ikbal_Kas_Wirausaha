@@ -24,7 +24,7 @@ include "../header.php";
             <td><?php echo $data++;?></td>
             <td><?php echo $row['name']?></td>
             <td><?php echo $row['date']?></td>
-            <td><?php echo $row['saldo']?></td>
+            <td><?php echo $row['saldo_out']?></td>
             <td><?php echo $row['description']?></td>
             <td><a href="index.php?page=edit_out&id=<?php echo $row['id'];?>">Edit</a>
             <a href="delet_out.php?id=<?php echo $row['id'];?>">Hapus</a></td>

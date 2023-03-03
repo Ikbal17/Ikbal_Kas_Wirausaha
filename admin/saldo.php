@@ -4,14 +4,14 @@ include "../header.php";
 
 ?>
   <?php
-        $result = mysqli_query($conn, 'SELECT SUM(saldo_in) AS saldo_in FROM tb_addmision_fee'); 
+        $result = mysqli_query($conn, 'SELECT SUM(saldo) AS saldo FROM tb_addmision_fee'); 
         $row = mysqli_fetch_assoc($result); 
-        $sum1 = $row['saldo_in'];
+        $sum1 = $row['saldo'];
     ?>
      <?php
-            $result = mysqli_query($conn, 'SELECT SUM(saldo_out) AS saldo_out FROM tb_money_out'); 
+            $result = mysqli_query($conn, 'SELECT SUM(saldo) AS saldo FROM tb_money_out'); 
             $row = mysqli_fetch_assoc($result); 
-            $sum2 = $row['saldo_out'];
+            $sum2 = $row['saldo'];
         ?>
 <div class="row">
     <div class="col bg-info bg-opacity-75">
@@ -64,7 +64,7 @@ include "../header.php";
                 <td><?php echo $data++;?></td>
                 <td><?php echo $row['name']?></td>
                 <td><?php echo $row['date']?></td>
-                <td><?php echo $row['saldo_in']?></td>
+                <td><?php echo $row['saldo']?></td>
                 <td><?php echo $row['description']?></td>
             </tr>
     <?php
@@ -146,7 +146,7 @@ include "../header.php";
                 <td><?php echo $data++;?></td>
                 <td><?php echo $row['name']?></td>
                 <td><?php echo $row['date']?></td>
-                <td><?php echo $row['saldo_out']?></td>
+                <td><?php echo $row['saldo']?></td>
                 <td><?php echo $row['description']?></td>
             </tr>
     <?php

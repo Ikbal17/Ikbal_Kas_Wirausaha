@@ -60,9 +60,8 @@ echo $_SESSION['level'];
    <img src="../image/laporan.png" alt=""><p>Laporan</p>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="index.php?page=saldo">Laporan harian</a></li>
-    <li><a class="dropdown-item" href="#">Laporan mingguan</a></li>
-    <li><a class="dropdown-item" href="#">Laporan bulanan</a></li>
+    <li><a class="dropdown-item" href="index.php?page=saldo">Laporan</a></li>
+    <li><a class="dropdown-item" href="#">Tambah Anggota</a></li>
   </ul>
 </div>
 

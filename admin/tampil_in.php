@@ -6,9 +6,9 @@ include "../header.php";
 <div class="col-lg-10 pt-5">
 <a href="index.php?page=Masuk" class="m-3"><button class="btn btn-primary">Tambahan Pemasukan</button></a> 
 <?php
-        $result = mysqli_query($conn, 'SELECT SUM(saldo_in) AS saldo_in FROM tb_addmision_fee'); 
+        $result = mysqli_query($conn, 'SELECT SUM(saldo) AS saldo FROM tb_addmision_fee'); 
         $row = mysqli_fetch_assoc($result); 
-        $sum = $row['saldo_in'];
+        $sum = $row['saldo'];
     ?>
 <table class="table table-striped table-hover m-3">
     <tr>
@@ -49,10 +49,10 @@ include "../header.php";
             <td><?php echo $data++;?></td>
             <td><?php echo $row['name']?></td>
             <td><?php echo $row['date']?></td>
-            <td><?php echo $row['saldo_in']?></td>
+            <td><?php echo $row['saldo']?></td>
             <td><?php echo $row['description']?></td>
-            <td><a href="index.php?page=edit_in&id=<?php echo $row['id'];?>">edit</a>
-            <a href="delet_in.php?id=<?php echo $row['id'];?>">Hapus</a></td>
+            <td><a href="index.php?page=edit_in&id=<?php echo $row['id'];?>"><img src="../image/edit.png" height="30" alt=""></a>
+            <a href="delet_in.php?id=<?php echo $row['id'];?>"><img src="../image/hapus.png" height="30" alt=""></a></td>
         </tr>
 <?php
     }

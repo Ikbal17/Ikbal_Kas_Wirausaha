@@ -9,9 +9,9 @@ include "../header.php";
     <div class="col-lg-4 col-md-6">
     <div class="kotak2  card shadow">
     <?php
-        $result1 = mysqli_query($conn, 'SELECT SUM(saldo_in) AS saldo_in FROM tb_addmision_fee'); 
+        $result1 = mysqli_query($conn, 'SELECT SUM(saldo) AS saldo FROM tb_addmision_fee'); 
         $row = mysqli_fetch_assoc($result1); 
-        $sum1 = $row['saldo_in'];
+        $sum1 = $row['saldo'];
     ?>
         <h5 class="offset-2 pt-5 fw-bold">Rp <?php echo $sum1;?></h5>
         <img class="g1" src="../image/pemasukan.png" alt="" height="100px">
@@ -23,9 +23,9 @@ include "../header.php";
     <div class="kotak3 card shadow">
 
     <?php
-        $result2 = mysqli_query($conn, 'SELECT SUM(saldo_out) AS saldo_out FROM tb_money_out'); 
+        $result2 = mysqli_query($conn, 'SELECT SUM(saldo) AS saldo FROM tb_money_out'); 
         $row = mysqli_fetch_assoc($result2); 
-        $sum2 = $row['saldo_out'];
+        $sum2 = $row['saldo'];
     ?>
 
     <h5 class="offset-2 pt-5 fw-bold">Rp <?php echo $sum2;?></h5>

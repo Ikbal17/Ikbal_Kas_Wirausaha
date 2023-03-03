@@ -3,6 +3,8 @@ include "../koneksi.php";
 include "../header.php";
 
 ?>
+<link rel="stylesheet" href="../style.css" type="text/css">
+
   <?php
         $result = mysqli_query($conn, 'SELECT SUM(saldo) AS saldo FROM tb_addmision_fee'); 
         $row = mysqli_fetch_assoc($result); 

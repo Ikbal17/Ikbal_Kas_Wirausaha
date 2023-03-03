@@ -15,7 +15,7 @@ if (isset($_POST['add'])) {
   }
 }
 ?>
-<a href=""></a>
+<link rel="stylesheet" href="../style.css" type="text/css">
 <div class="col-8 ms-5 pt-5 ps-5">
 <form class="row g-3" action="" method="post">
 

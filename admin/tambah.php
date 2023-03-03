@@ -7,7 +7,7 @@ if (isset($_POST['add'])) {
     $input = $_POST['saldo'];
     $information = $_POST['description'];
 
-    $add = "INSERT INTO tb_addmision_fee (name, saldo_in, description)
+    $add = "INSERT INTO tb_addmision_fee (name, saldo, description)
     VALUES ('$name', '$input','$information')";
     if ($conn->query($add) === TRUE) {
    header("location: index.php?page=Pemasukan");
@@ -15,7 +15,7 @@ if (isset($_POST['add'])) {
   }
 }
 ?>
-<a href=""></a>
+<link rel="stylesheet" href="../style.css" type="text/css">
 <div class="col-8 ms-5 pt-5 ps-5">
 <form class="row g-3" action="" method="post">
 

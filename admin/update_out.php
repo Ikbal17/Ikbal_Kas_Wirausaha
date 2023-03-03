@@ -10,7 +10,9 @@ $edit = $conn->query($sql);
 
 <?php
 while ($row=$edit->fetch_assoc()) {
-?>    
+?>   
+<link rel="stylesheet" href="../style.css" type="text/css">
+
     <div class="col-8 ms-5 pt-5 ps-5">
 <form class="row g-3" action="" method="post">
   <div class="col-6">
@@ -32,7 +34,7 @@ while ($row=$edit->fetch_assoc()) {
 
   
 
-    <input type="submit" class="btn btn-success d-inline" value="Tambah" name="edit" value="Tambah">
+    <input type="submit" class="btn btn-success d-inline" value="Tambah" name="edit" value="Ubah">
 </div>
 </form>
 </div>

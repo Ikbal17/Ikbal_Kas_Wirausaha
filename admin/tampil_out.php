@@ -2,16 +2,35 @@
 include "../koneksi.php";
 include "../header.php";
 ?>
-<div class="row">
-<div class="col-lg-10 pt-5">
-<a href="index.php?page=Masuk" class="m-3"><button class="btn btn-primary">Tambahan Pemasukan</button></a> 
-<?php
-        $result = mysqli_query($conn, 'SELECT SUM(saldo) AS saldo FROM tb_money_out'); 
-        $row = mysqli_fetch_assoc($result); 
-        $sum = $row['saldo'];
-    ?>
-<table class="table table-striped table-hover m-3">
-    <tr>
+<head>
+
+
+
+<!-- Custom fonts for this template -->
+<link href="../patch/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+<!-- Custom styles for this template -->
+
+<!-- Custom styles for this page -->
+<link href="../patch/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+</head>
+
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+               
+                    <div class="card-body">
+                        <div class="table-responsive">
+                        
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                    <tr>
         <td>NO</td>
         <td>NAMA</td>
         <td>TANGGAL</td>
@@ -19,28 +38,12 @@ include "../header.php";
         <td>KETERANGAN</td>
         <td>ACTION</td>
     </tr>
-    <?php
-    if(isset($_GET['search'])){
-                    $Name = $_GET['search'];
-                    $query = "SELECT * FROM tb_money_out  WHERE name LIKE '%$Name%'";
+                                    </thead>
+                                 
+                                    <tbody>
+                                    <?php
+                    $query = "SELECT * FROM tb_money_out";
                     $result= $conn->query($query);
-                }else {
-                    $batas = 5;
-                    $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
-                    $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;	
-    
-                    $previous = $halaman - 1;
-                    $next = $halaman + 1;
-                    
-                    $data = mysqli_query($conn,"SELECT * FROM tb_money_out ORDER BY Id DESC");
-                    $jumlah_data = mysqli_num_rows($data);
-                    $total_halaman = ceil($jumlah_data / $batas);
-    
-                    $data_pegawai = "SELECT * FROM tb_money_out limit $halaman_awal, $batas";
-                    $nomor = $halaman_awal+1;
-                    //$query = "SELECT * FROM tb_input  ORDER BY Id DESC";
-                    $result= $conn->query($data_pegawai);
-                }
     $data = 1;
     while ($row=$result->fetch_array()){
         
@@ -57,47 +60,29 @@ include "../header.php";
 <?php
     }
     ?>
-</table>
- <div>
-                <ul class="pagination justify-content-center">
-                    <li class="page-item">
-                        <a class="page-link" <?php if($halaman > 1){ echo "href='?halaman=$previous&page=Pemasukan'"; } ?>>Previous</a>
-                    </li>
-                    <?php 
-                    for($x=1;$x<=$total_halaman;$x++){
-                        ?> 
-                        <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>&page=Pemasukan"><?php echo $x; ?></a></li>
-                        <?php
-                    }
-                    ?>				
-                    <li class="page-item">
-                        <a  class="page-link" <?php if($halaman < $total_halaman) { echo "href='?halaman=$next&page=Pemasukan'"; } ?>>Next</a>
-                    </li>
-                </ul>
-                </div>
-</div>
+                                     
+                                    </tbody>
+                                </table>
 
-<div class="pt-5 col-lg-2 mt-5">
-<div class="card mt-1">
-      <div class="card-body">
-        <h5 class="card-title">Saldo Akhir</h5>
-        <p class="card-text"><?php echo $sum;?></p>
-      </div>
-    </div>
-</div>
+           
 
-</div>
 
-<script type="text/javascript">
-  function printDiv (el) {
-    var a= document.body.innerHTML;
-    var b= document.getElementById(el).innerHTML;
+<!-- Bootstrap core JavaScript-->
+<script src="../patch/vendor/jquery/jquery.min.js"></script>
+<script src="../patch/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    document.body.innerHTML=b;
-    window.print();
-    dokument.body.innerHTML=a;
-  }
-</script>
-<?php
+<!-- Core plugin JavaScript-->
+<script src="../patch/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="../patch/js/sb-admin-2.min.js"></script>
+
+<!-- Page level plugins -->
+<script src="../patch/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="../patch/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="../patch/js/demo/datatables-demo.js"></script><?php
 include "../footer.php";
 ?>
+

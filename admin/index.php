@@ -124,6 +124,9 @@ if (isset($_GET['page'])) {
     case "saldo":
       include "saldo.php";
       break;
+    case "cari_in":
+      include "search_in.php";
+      break;
     default:
     echo "halam ini gak ada";
       break;

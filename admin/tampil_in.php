@@ -2,6 +2,12 @@
 include "../koneksi.php";
 include "../header.php";
 ?>
+<?php
+    $result = mysqli_query($conn, 'SELECT SUM(saldo) AS saldo FROM tb_addmision_fee'); 
+    $row = mysqli_fetch_assoc($result); 
+    $sum = $row['saldo'];
+?>
+
 <head>
 
 
@@ -28,7 +34,7 @@ include "../header.php";
                     <div class="card-body pt-5">
                     <a href="index.php?page=Masuk" class=""><button class="btn btn-primary">Tambahan</button></a> <br><br>
                         <div class="table-responsive">
-                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <table class="table table-bordered table-info table-striped" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                     <tr>
         <td>NO</td>
@@ -60,6 +66,14 @@ include "../header.php";
 <?php
     }
     ?>
+    <tr>
+        <td>Total :</td>
+        <td></td>
+        <td></td>
+        <td><?php echo $sum;?></td>
+        <td></td>
+        <td></td>
+    </tr>
                                      
                                     </tbody>
                                 </table>

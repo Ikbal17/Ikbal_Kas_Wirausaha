@@ -17,9 +17,9 @@ include "../header.php";
 // chart
 
 $dataPoints = array( 
-	array("label"=>"Pemasukan", "y"=>($sum1/$sum3)*(1/100)),
-	array("label"=>"Pengeluaran", "y"=>($sum2/$sum3)*(1/100)),
-	array("label"=>"Total Saldo", "y"=>$sum3*(1/100))
+	array("label"=>"Pemasukan", "y"=>($sum1/$sum3)*(100/100)),
+	array("label"=>"Pengeluaran", "y"=>($sum2/$sum3)*(100/100)),
+	array("label"=>"Total Saldo", "y"=>$sum3*(100/100))
 	
 )
  
@@ -38,7 +38,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	data: [{
 		type: "pie",
 		indexLabel: "{y}",
-		yValueFormatString: "#,##0.00\"%\"",
+		yValueFormatString: "##\"%\"",
 		indexLabelPlacement: "inside",
 		indexLabelFontColor: "#36454F",
 		indexLabelFontSize: 18,

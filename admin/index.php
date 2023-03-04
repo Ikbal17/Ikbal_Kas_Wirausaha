@@ -22,19 +22,8 @@ echo $_SESSION['level'];
 
 
       <header>
-      <section id="content">
-        <nav class="shadow">
-          <div>
-            <h3 class="" style="margin-left: 270px;">Buku kas kelas</h3>
-          </div>
-          <!-- tombol side -->
-          <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"><img src="../image/2.png" alt=""></span>
-  </button><button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"><img src="../image/2.png" alt=""></span>
-  </button>
-  <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block sidebar collapse py-5" style="width: 200px; background-color: #64A7F5; height: 100%;">
-      <div class="position-sticky pt-3 sidebar-sticky">
+      <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block sidebar collapse" style="">
+      <div class="position-fixed pt-5 sidebar-fixed" style="width: 217px; background-color: #64A7F5; height: 100%;">
         <ul class="nav flex-column">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.php?page=home">
@@ -79,17 +68,29 @@ echo $_SESSION['level'];
         </ul>
       </div>
     </nav>
+      <section id="content">
+        <nav class="shadow" style="height:50px;">
+          <div>
+            <h3 class="" style="margin-left: 270px;">Buku kas kelas</h3>
+          </div>
+          <!-- tombol side -->
+          <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><img src="../image/2.png" alt=""></span>
+  </button><button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><img src="../image/2.png" alt=""></span>
+  </button>
+ 
        </nav>
-       
+     
   </section>
      
       </header>
         <!-- sidebar -->
 
        
-
-    
-<main class="col-md-10 ms-auto col-lg-10 px-md-5 pt-5">
+        <div class="row" >
+      
+    <main class="col-md-10 ms-auto col-lg-10 px-md-5 ">
         
 
       <?php
@@ -136,6 +137,9 @@ if (isset($_GET['page'])) {
 }
 ?>
 </main>
+
+       </div>
+    
 
 
 

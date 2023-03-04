@@ -20,12 +20,13 @@ include "../header.php";
 </head>
 
             <!-- End of Topbar -->
-
+            
             <!-- Begin Page Content -->
             <div class="container-fluid">
 
                
-                    <div class="card-body">
+                    <div class="card-body pt-5">
+                    <a href="index.php?page=Keluar" class=""><button class="btn btn-primary">Tambahan</button></a> <br><br>
                         <div class="table-responsive">
                         
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

@@ -7,10 +7,10 @@ if (isset($_POST['add'])) {
     $input = $_POST['saldo'];
     $information = $_POST['description'];
 
-    $add = "INSERT INTO tb_addmision_fee (name, saldo, description)
+    $add = "INSERT INTO tb_money_out (name, saldo, description)
     VALUES ('$name', '$input','$information')";
     if ($conn->query($add) === TRUE) {
-   header("location: index.php?page=Pemasukan");
+   header("location: index.php?page=Pengeluaran");
    ob_end_flush();
   }
 }
@@ -26,7 +26,7 @@ if (isset($_POST['add'])) {
   </div>
 
   <div class="col-12">
-    <label for="inputAddress" class="form-label">Pemasukan</label>
+    <label for="inputAddress" class="form-label">Pengeluaran</label>
     <input type="text" class="form-control" id="inputAddress" name="saldo">
   </div>
  </div>

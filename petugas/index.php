@@ -22,19 +22,8 @@ echo $_SESSION['level'];
 
 
       <header>
-      <section id="content">
-        <nav class="shadow">
-          <div>
-            <h3 class="" style="margin-left: 270px;">Buku kas kelas</h3>
-          </div>
-          <!-- tombol side -->
-          <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"><img src="../image/2.png" alt=""></span>
-  </button><button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"><img src="../image/2.png" alt=""></span>
-  </button>
-  <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse py-5" style="width: 250px; background-color: #64A7F5; height: 100%;">
-      <div class="position-sticky pt-3 sidebar-sticky">
+      <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block sidebar collapse" style="">
+      <div class="position-fixed pt-5 sidebar-fixed" style="width: 217px; background-color: #64A7F5; height: 100%;">
         <ul class="nav flex-column">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.php?page=home">
@@ -60,9 +49,8 @@ echo $_SESSION['level'];
    <img src="../image/laporan.png" alt=""><p>Laporan</p>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="index.php?page=lapor">Laporan harian</a></li>
-    <li><a class="dropdown-item" href="#">Laporan mingguan</a></li>
-    <li><a class="dropdown-item" href="#">Laporan bulanan</a></li>
+    <li><a class="dropdown-item" href="index.php?page=saldo">Laporan</a></li>
+    <li><a class="dropdown-item" href="#">Tambah Anggota</a></li>
   </ul>
 </div>
 
@@ -80,17 +68,29 @@ echo $_SESSION['level'];
         </ul>
       </div>
     </nav>
+      <section id="content">
+        <nav class="shadow" style="height:50px;">
+          <div>
+            <h3 class="" style="margin-left: 270px;">Buku kas kelas</h3>
+          </div>
+          <!-- tombol side -->
+          <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><img src="../image/2.png" alt=""></span>
+  </button><button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><img src="../image/2.png" alt=""></span>
+  </button>
+ 
        </nav>
-       
+     
   </section>
      
       </header>
         <!-- sidebar -->
 
        
-
-    
-<main class="col-md-9 ms-auto col-lg-10 px-md-4 pt-5">
+        <div class="row" >
+      
+    <main class="col-md-10 ms-auto col-lg-10 px-md-5 ">
         
 
       <?php
@@ -102,19 +102,31 @@ if (isset($_GET['page'])) {
       include "home.php";
       break;
     case "Pemasukan":
-      include "tambah.php";
+      include "tampil_in.php";
       break;
     case "Pengeluaran":
+      include "tampil_out.php";
+      break;
+    case "Masuk":
+      include "tambah.php";
+      break;
+    case "Keluar":
       include "kurang.php";
       break;
-    case "lapor":
-      include "tampil.php";
+    case "edit_in":
+      include "update_in.php";
       break;
-    case "edit":
-      include "update.php";
+    case "edit_out":
+      include "update_out.php";
       break;
     case "delete":
       include "delet.php";
+      break;
+    case "saldo":
+      include "saldo.php";
+      break;
+    case "cari_in":
+      include "search_in.php";
       break;
     default:
     echo "halam ini gak ada";
@@ -126,9 +138,12 @@ if (isset($_GET['page'])) {
 ?>
 </main>
 
+       </div>
+    
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
 <?php
 include "../footer.php";

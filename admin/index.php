@@ -22,9 +22,10 @@ echo $_SESSION['level'];
 
 
       <header>
-      <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block sidebar collapse" style="">
-      <div class="position-fixed pt-5 sidebar-fixed" style="width: 217px; background-color: #64A7F5; height: 100%;">
-        <ul class="nav flex-column">
+      <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block sidebar collapse">
+      <div class="position-fixed sidebar-fixed" style="width: 217px; background-color: #64A7F5; height: 100%;">
+      <a class="navbar-brand" href="#"><img src="" alt=""></a>
+        <ul class="nav  pt-5 flex-column">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.php?page=home">
              <img src="../image/home.png" alt="">
@@ -50,7 +51,7 @@ echo $_SESSION['level'];
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <li><a class="dropdown-item" href="index.php?page=saldo">Laporan</a></li>
-    <li><a class="dropdown-item" href="#">Tambah Anggota</a></li>
+    <li><a class="dropdown-item" href="#">Tambah Pengguna</a></li>
   </ul>
 </div>
 

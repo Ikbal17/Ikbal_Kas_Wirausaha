@@ -9,6 +9,8 @@ include "header.php";
   <div class="row">
     <div class="col-md-4 offset-md-4 my-5">
     <div class="text-center">
+
+  <img src="image/logo.png" width=250px;><br>
   <img src="image/1.png" class="rounded">
   <h1>Login</h1>
 </div>

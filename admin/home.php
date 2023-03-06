@@ -4,25 +4,25 @@ include "../header.php";
 ?>
 
 <?php
-        $result1 = mysqli_query($conn, 'SELECT SUM(saldo) AS saldo FROM tb_addmision_fee'); 
-        $row = mysqli_fetch_assoc($result1); 
-        $sum1 = $row['saldo'];
+       $kosong =  $result1 = mysqli_query($conn, 'SELECT SUM(saldo) AS saldo FROM tb_addmision_fee'); 
+       $row = mysqli_fetch_assoc($result1); 
+       $sum1 = $row['saldo'];
 
-        // beda tabel
-        $result2 = mysqli_query($conn, 'SELECT SUM(saldo) AS saldo FROM tb_money_out'); 
-        $row = mysqli_fetch_assoc($result2); 
-        $sum2 = $row['saldo'];
-        $sum3 = $sum1 - $sum2;
-        $total = ((($sum3/$sum1)*100/100)*100)+((($sum2/$sum1)*100/100)*100);
-
+       // beda tabel
+       $result2 = mysqli_query($conn, 'SELECT SUM(saldo) AS saldo FROM tb_money_out'); 
+       $row = mysqli_fetch_assoc($result2); 
+       $sum2 = $row['saldo'];
+       $sum3 = $sum1 - $sum2;
+       $total = ((($sum3/$sum1)*100/100)*100)+((($sum2/$sum1)*100/100)*100);
+;
 // chart
 
 $dataPoints = array( 
 	array("label"=>"Pengeluaran", "y"=>(($sum2/$sum1)*100/100)*100),
-	array("label"=>"total", "y"=>(($sum3/$sum1)*100/100)*100),
+	array("label"=>"total", "y"=>(($sum3/$sum1)*100/100)*100)
 	
 )
- 
+
 ?>
 
 <script>

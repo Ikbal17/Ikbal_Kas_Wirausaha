@@ -8,7 +8,7 @@ if ($_SESSION ['level'] ="") {
   # code...
 }
 
-if ($_SESSION ['level'] =="admin") {
+if ($_SESSION ['level'] =="petugas") {
   header("location: ../admin/index.php");
   # code...
 }
@@ -22,9 +22,10 @@ echo $_SESSION['level'];
 
 
       <header>
-      <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block sidebar collapse" style="">
-      <div class="position-fixed pt-5 sidebar-fixed" style="width: 217px; background-color: #64A7F5; height: 100%;">
-        <ul class="nav flex-column">
+      <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block sidebar collapse">
+      <div class="position-fixed sidebar-fixed" style="width: 217px; background-color: #64A7F5; height: 100%;">
+      <a class="navbar-brand" href="#"><img src="" alt=""></a>
+        <ul class="nav  pt-5 flex-column">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.php?page=home">
              <img src="../image/home.png" alt="">

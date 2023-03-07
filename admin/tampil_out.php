@@ -61,8 +61,28 @@ include "../header.php";
             <td><?php echo $row['saldo']?></td>
             <td><?php echo $row['description']?></td>
             <td><a href="index.php?page=edit_in&id=<?php echo $row['id'];?>"><img src="../image/edit.png" height="30" alt=""></a>
-            <a href="delet_in.php?id=<?php echo $row['id'];?>"><img src="../image/hapus.png" height="30" alt=""></a></td>
-        </tr>
+            <!-- <a href="delet_in.php?id=<?php echo $row['id'];?>"><img src="../image/hapus.png" height="30" alt=""></a> -->
+            <button class="btn" type="button" value="" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $row['id'];?>"><img src="../image/hapus.png" height="30" alt=""></button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel<?php echo $row['id'];?>">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Yakin Ingin menghapusnya ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <a href="delet_out.php?id=<?php echo $row['id'];?>" class="btn btn-primary">Yakin</a>
+    </div>
+    </div>
+  </div>
+</div>
+            
+        </td>        </tr>
 <?php
     }
     ?>

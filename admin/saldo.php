@@ -21,6 +21,8 @@ include "../header.php";
 
 <br>
 <button class="btn btn-success  d-inline" onclick="printDiv('print')" type="submit" data-toggle="print" data-placement="right" title="print"><i class='bx bx-printer'>Print</i></button>
+
+<!-- input search -->
 <form action="" method="get" style="display: inline;">
 <input  type="text" name="page" value="saldo" hidden>
     <input placeholder="bulan" type="number" min="1" max="12" name="bulan" class="border border-2 rounded-2">
@@ -37,7 +39,7 @@ include "../header.php";
             <th>SALDO</th>
             <th>KETERANGAN</th>
         </tr>
-        
+        <!--Query Search 1  -->
         <?php
         if (isset($_GET["search"])) {
             $bulan= $_GET["bulan"];
@@ -88,6 +90,7 @@ include "../header.php";
             <th>SALDO</th>
             <th>KETERANGAN</th>
         </tr>
+        <!-- Query Search 2 -->
         <?php
          if (isset($_GET["search"])) {
             $bulan= $_GET["bulan"];

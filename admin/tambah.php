@@ -22,18 +22,18 @@ if (isset($_POST['add'])) {
  <div class="col-6">
  <div class="col-12">
     <label for="inputEmail4" class="form-label">Nama</label>
-    <input type="text" class="form-control" id="inputEmail4" name="name" pla>
+    <input type="text" class="form-control" id="inputEmail4" name="name" required>
   </div>
 
   <div class="col-12">
     <label for="inputAddress" class="form-label">Pemasukan</label>
-    <input type="text" class="form-control" id="inputAddress" name="saldo">
+    <input type="text" class="form-control" id="inputAddress" name="saldo" required>
   </div>
  </div>
 
   <div class="col-6">
     <label for="inputAddress2" class="form-label">Keterangan</label>
-    <textarea class="form-control" id="inputAddress2" name="description" cols="20" rows="4"></textarea>
+    <textarea class="form-control" id="inputAddress2" name="description" cols="20" rows="4" required></textarea>
   </div>
 
   <div class="">

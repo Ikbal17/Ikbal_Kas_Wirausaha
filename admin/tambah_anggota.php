@@ -7,7 +7,7 @@ if (isset($_POST['add'])) {
     $No = $_POST['No hp'];
     $Address = $_POST['Address'];
 
-    $add = "INSERT INTO tb_user (Name, No hp, Address)
+    $add = "INSERT INTO tb_user (Name, No_hp, Address)
     VALUES ('$Name', '$No','$information')";
     if ($conn->query($add) === TRUE) {
    header("location: index.php?page=Pemasukan");

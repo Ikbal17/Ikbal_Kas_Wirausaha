@@ -54,7 +54,7 @@ chart.render();
     <div class="col-lg-4 col-md-6">
     <div class="kotak2  card shadow">
    
-        <h5 class="offset-2 pt-5 fw-bold">Rp <?php echo $sum1;?></h5>
+        <h5 class="offset-2 pt-5 fw-bold">Rp. <?php echo $sum1;?></h5>
         <img class="g1" src="../image/pemasukan.png" alt="" height="100px">
         <h4>Pemasukan</h4>
 </div>
@@ -65,7 +65,7 @@ chart.render();
 
     
 
-    <h5 class="offset-2 pt-5 fw-bold">Rp <?php echo $sum2;?></h5>
+    <h5 class="offset-2 pt-5 fw-bold">Rp. <?php echo $sum2;?></h5>
         <img class="g1" src="../image/pengeluaran.png" alt="">
         <h4>Pengeluaran</h4>
     </div>
@@ -73,7 +73,7 @@ chart.render();
 
     <div class="col-lg-4 col-md-6">
    <div class="kotak1  card shadow">
-   <h5 class="offset-2 pt-5 fw-bold">Rp <?php echo $sum1 - $sum2;?></h5>
+   <h5 class="offset-2 pt-5 fw-bold">Rp. <?php echo $sum1 - $sum2;?></h5>
         <img class="g1" src="../image/total.png" alt="">
         <h4>Total</h4>
     </div>

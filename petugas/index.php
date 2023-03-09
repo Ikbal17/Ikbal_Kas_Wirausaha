@@ -44,16 +44,12 @@ echo $_SESSION['level'];
               <p>Pengeluaran</p>
             </a>
           </li>
-
-          <div class="dropdown px-1">
-  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-   <img src="../image/laporan.png" alt=""><p>Laporan</p>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="index.php?page=saldo">Laporan</a></li>
-    <li><a class="dropdown-item" href="#">Tambah Anggota</a></li>
-  </ul>
-</div>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?page=saldo">
+             <img src="../image/laporan.png" alt="">
+              <p>Laporan</p>
+            </a>
+          </li>
 
 <br><br><br><br>
           <hr>

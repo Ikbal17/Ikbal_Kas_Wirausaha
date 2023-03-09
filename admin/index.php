@@ -51,7 +51,7 @@ echo $_SESSION['level'];
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <li><a class="dropdown-item" href="index.php?page=saldo">Laporan</a></li>
-    <li><a class="dropdown-item" href="#">Tambah Pengguna</a></li>
+    <li><a class="dropdown-item" href="index.php?page=add_user">Tambah Pengguna</a></li>
   </ul>
 </div>
 
@@ -128,6 +128,9 @@ if (isset($_GET['page'])) {
       break;
     case "cari_in":
       include "search_in.php";
+      break;
+    case "add_user":
+      include "tambah_anggota.php";
       break;
     default:
     echo "halam ini gak ada";

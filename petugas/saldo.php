@@ -41,7 +41,7 @@ include "../header.php";
                 <td><?php echo $data++;?></td>
                 <td><?php echo $row['name']?></td>
                 <td><?php echo $row['date']?></td>
-                <td><?php echo $row['saldo']?></td>
+                <td>Rp. <?php echo $row['saldo']?></td>
                 <td><?php echo $row['description']?></td>
             </tr>
     <?php
@@ -51,7 +51,7 @@ include "../header.php";
             <th>Total:</th>
             <td></td>
             <td></td>
-            <th><?php echo $sum1?></th>
+            <th>Rp. <?php echo $sum1?></th>
             <td></td>
         </tr>
     </table>
@@ -85,7 +85,7 @@ include "../header.php";
                 <td><?php echo $data++;?></td>
                 <td><?php echo $row['name']?></td>
                 <td><?php echo $row['date']?></td>
-                <td><?php echo $row['saldo']?></td>
+                <td>Rp. <?php echo $row['saldo']?></td>
                 <td><?php echo $row['description']?></td>
             </tr>
     <?php
@@ -95,7 +95,7 @@ include "../header.php";
             <th>Total:</th>
             <td></td>
             <td></td>
-            <th><?php echo $sum2?></th>
+            <th>Rp. <?php echo $sum2?></th>
             <td></td>
         </tr>
     </table>

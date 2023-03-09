@@ -4,11 +4,14 @@ include "../koneksi.php";
 include "../header.php";
 if (isset($_POST['add'])) {
     $Name = $_POST['Name'];
-    $No = $_POST['No hp'];
+    $No = $_POST['No_hp'];
     $Address = $_POST['Address'];
+    $Username = $_POST['Username'];
+    $Password = $_POST['Password'];
+    $role = $_POST['role'];
 
-    $add = "INSERT INTO tb_user (Name, No_hp, Address)
-    VALUES ('$Name', '$No','$information')";
+    $add = "INSERT INTO tb_user (Name, No_hp, Address, Username, Password, role)
+    VALUES ('$Name', '$No','$Address', '$Username', 'MD5 = $Password', '$role')";
     if ($conn->query($add) === TRUE) {
    header("location: index.php?page=Pemasukan");
    ob_end_flush();
@@ -21,19 +24,35 @@ if (isset($_POST['add'])) {
 
  <div class="col-6">
  <div class="col-12">
-    <label for="inputEmail4" class="form-label">Nama</label>
-    <input type="text" class="form-control" id="inputEmail4" name="name" pla>
+    <label for="nama" class="form-label">Nama</label>
+    <input type="text" class="form-control" id="nama" name="name" pla>
   </div>
 
   <div class="col-12">
-    <label for="inputAddress" class="form-label">Pemasukan</label>
-    <input type="text" class="form-control" id="inputAddress" name="saldo">
+    <label for="no" class="form-label">No Handphone</label>
+    <input type="text" class="form-control" id="no" name="No_hp">
   </div>
+  <div class="col-12">
+    <label for="no" class="form-label">Username</label>
+    <input type="text" class="form-control" id="no" name="Username">
+  </div>
+  <div class="col-12">
+    <label for="no" class="form-label">Password</label>
+    <input type="text" class="form-control" id="no" name="Password">
+  </div>
+  <div class="col-12">
+    <label for="role">Tipe Akun</label>
+  <select class="form-select" aria-label="Default select example" id="role" name="role">
+  <option value="admin">Admin</option>
+  <option value="petugas">Petugas</option>
+</select>
+  </div>
+  
  </div>
 
   <div class="col-6">
-    <label for="inputAddress2" class="form-label">Keterangan</label>
-    <textarea class="form-control" id="inputAddress2" name="description" cols="20" rows="4"></textarea>
+    <label for="Address" class="form-label">Alamat</label>
+    <textarea class="form-control" id="Address" name="Address" cols="40" rows="12"></textarea>
   </div>
 
   <div class="">

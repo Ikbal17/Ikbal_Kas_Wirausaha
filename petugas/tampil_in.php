@@ -42,7 +42,6 @@ include "../header.php";
         <td>TANGGAL</td>
         <td>SALDO</td>
         <td>KETERANGAN</td>
-        <td>ACTION</td>
     </tr>
                                     </thead>
                                  
@@ -60,13 +59,14 @@ include "../header.php";
             <td><?php echo $row['date']?></td>
             <td>Rp. <?php echo $row['saldo']?></td>
             <td><?php echo $row['description']?></td>
-            <td><a href="index.php?page=edit_in&id=<?php echo $row['id'];?>"><img src="../image/edit.png" height="30" alt=""></a>
-            <a href="delet_in.php?id=<?php echo $row['id'];?>"><img src="../image/hapus.png" height="30" alt=""></a></td>
         </tr>
 <?php
     }
     ?>
-    <tr>
+  
+                                     
+                                    </tbody>
+                                    <tr>
         <td>Total :</td>
         <td></td>
         <td></td>
@@ -74,8 +74,6 @@ include "../header.php";
         <td></td>
         <td></td>
     </tr>
-                                     
-                                    </tbody>
                                 </table>
 
            

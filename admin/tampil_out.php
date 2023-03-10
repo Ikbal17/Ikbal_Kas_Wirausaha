@@ -1,4 +1,5 @@
 <?php
+
 include "../koneksi.php";
 include "../header.php";
 ?>
@@ -7,6 +8,7 @@ include "../header.php";
     $row = mysqli_fetch_assoc($result); 
     $sum = $row['saldo'];
 ?>
+
 <head>
 
 
@@ -25,7 +27,7 @@ include "../header.php";
 </head>
 
             <!-- End of Topbar -->
-            
+
             <!-- Begin Page Content -->
             <div class="container-fluid">
 
@@ -33,8 +35,7 @@ include "../header.php";
                     <div class="card-body pt-5">
                     <a href="index.php?page=Keluar" class=""><button class="btn btn-primary">Tambahan</button></a> <br><br>
                         <div class="table-responsive">
-                        
-                        <table class="table table-bordered table-striped table-info" id="dataTable" width="100%" cellspacing="0">
+                        <table class="table table-bordered table-info table-striped" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                     <tr>
         <td>NO</td>
@@ -64,11 +65,11 @@ include "../header.php";
             <!-- <a href="delet_in.php?id=<?php echo $row['id'];?>"><img src="../image/hapus.png" height="30" alt=""></a> -->
             <button class="btn" type="button" value="" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $row['id'];?>"><img src="../image/hapus.png" height="30" alt=""></button>
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal<?php echo $row['id'];?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel<?php echo $row['id'];?>">Modal title</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -82,11 +83,13 @@ include "../header.php";
   </div>
 </div>
             
-        </td>        </tr>
+        </td>
+        </tr>
 <?php
     }
     ?>
-                  
+   
+                                     
                                     </tbody>
                                     <tr>
         <td>Total :</td>
@@ -119,6 +122,10 @@ include "../header.php";
 <script src="../patch/js/demo/datatables-demo.js"></script><?php
 include "../footer.php";
 ?>
+
+
+
+
 
 <script>
     const myModal = document.getElementById('myModal')

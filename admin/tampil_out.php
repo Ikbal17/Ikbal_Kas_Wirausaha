@@ -86,15 +86,16 @@ include "../header.php";
 <?php
     }
     ?>
-    <tr>
+                  
+                                    </tbody>
+                                    <tr>
         <td>Total :</td>
         <td></td>
         <td></td>
         <td>Rp. <?php echo $sum;?></td>
         <td></td>
         <td></td>
-    </tr>              
-                                    </tbody>
+    </tr>
                                 </table>
 
            

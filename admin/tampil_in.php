@@ -87,7 +87,10 @@ include "../header.php";
 <?php
     }
     ?>
-    <tr>
+   
+                                     
+                                    </tbody>
+                                    <tr>
         <td>Total :</td>
         <td></td>
         <td></td>
@@ -95,8 +98,6 @@ include "../header.php";
         <td></td>
         <td></td>
     </tr>
-                                     
-                                    </tbody>
                                 </table>
 
            

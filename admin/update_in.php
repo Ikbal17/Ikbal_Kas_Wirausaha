@@ -51,8 +51,9 @@ if (isset($_POST['edit'])) {
     $update =  $conn->query("UPDATE tb_addmision_fee SET name='$name',
     saldo='$input', description='$Information' WHERE id='$id'");
     if ($update) {
-        header("location:index.php?page=Pemasukan");
-        ob_end_flush();
+       echo "<script>
+       document.location.href='index.php?page=Pemasukan';
+       </script>";
     }
 }
 ?>

@@ -1,5 +1,4 @@
 <?php
-ob_start();
 include "../koneksi.php";
 include "../header.php";
 $id = $_GET['id'];
@@ -51,8 +50,9 @@ if (isset($_POST['edit'])) {
     $update =  $conn->query("UPDATE tb_money_out SET name='$name',
     saldo='$input', description='$Information' WHERE id='$id'");
     if ($update) {
-        header("location:index.php?page=Pengeluaran");
-        ob_end_flush();
+        echo "<script>
+        document.location.href='index.php?page=Pengeluaran';
+        </script>";
     }
 }
 ?>

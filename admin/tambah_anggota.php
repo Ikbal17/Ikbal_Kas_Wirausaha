@@ -11,10 +11,11 @@ if (isset($_POST['add'])) {
     $role = $_POST['role'];
 
     $add = "INSERT INTO tb_user (Name, No_hp, Address, Username, Password, role)
-    VALUES ('$Name', '$No','$Address', '$Username', 'MD5 = $Password', '$role')";
+    VALUES ('$Name', '$No','$Address', '$Username', MD5('$Password'), '$role')";
     if ($conn->query($add) === TRUE) {
-   header("location: index.php?page=Pemasukan");
-   ob_end_flush();
+   echo "<script>
+   document.location.href='index.php?page=tampil_user';
+   </script>";
   }
 }
 ?>
@@ -25,7 +26,7 @@ if (isset($_POST['add'])) {
  <div class="col-6">
  <div class="col-12">
     <label for="nama" class="form-label">Nama</label>
-    <input type="text" class="form-control" id="nama" name="name" pla>
+    <input type="text" class="form-control" id="nama" name="Name" pla>
   </div>
 
   <div class="col-12">

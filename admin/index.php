@@ -51,7 +51,7 @@ echo $_SESSION['level'];
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <li><a class="dropdown-item" href="index.php?page=saldo">Laporan</a></li>
-    <li><a class="dropdown-item" href="index.php?page=add_user">Tambah Pengguna</a></li>
+    <li><a class="dropdown-item" href="index.php?page=tampil_user">Tambah Pengguna</a></li>
   </ul>
 </div>
 
@@ -72,7 +72,7 @@ echo $_SESSION['level'];
       <section id="content">
         <nav class="shadow" style="height:50px;">
           <div>
-            <h3 class="" style="margin-left: 270px;">Buku kas kelas</h3>
+            <h3 class="" style="margin-left: 270px;">Buku kas Wirausaha</h3>
           </div>
           <!-- tombol side -->
           <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -120,8 +120,8 @@ if (isset($_GET['page'])) {
     case "edit_out":
       include "update_out.php";
       break;
-    case "delete":
-      include "delet.php";
+      case "edit_user":
+      include "update_user.php";
       break;
     case "saldo":
       include "saldo.php";
@@ -131,6 +131,9 @@ if (isset($_GET['page'])) {
       break;
     case "add_user":
       include "tambah_anggota.php";
+      break;
+       case "tampil_user":
+      include "tampil_user.php";
       break;
     default:
     echo "halam ini gak ada";

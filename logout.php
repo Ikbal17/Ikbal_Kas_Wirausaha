@@ -1,11 +1,11 @@
 
 <?php 
-// // mengaktifkan session
-session_start();
- 
+
 // menghapus semua session
 session_destroy();
  
 // mengalihkan halaman sambil mengirim pesan logout
-header("location:../Ikbal_Kas_Wirausaha/index.php");
+echo "
+<script>document.location.href='../Ikbal_Kas_Wirausaha/index.php';</script>
+";
 ?>

@@ -68,7 +68,7 @@ echo $_SESSION['level'];
       <section id="content">
         <nav class="shadow" style="height:50px;">
           <div>
-            <h3 class="" style="margin-left: 270px;">Buku kas kelas</h3>
+            <h3 class="" style="margin-left: 270px;">Buku kas Wirausaha</h3>
           </div>
           <!-- tombol side -->
           <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">

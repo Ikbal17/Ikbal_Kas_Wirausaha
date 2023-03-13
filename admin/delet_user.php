@@ -4,9 +4,9 @@ ob_start();
     include "../header.php";
 
         $id = $_GET['id'];
-        $result = $conn->query("DELETE FROM tb_addmision_fee WHERE id='$id'");
+        $result = $conn->query("DELETE FROM tb_user WHERE ID='$id'");
         if ($result) {
-            header("location:index.php?page=Pemasukan");
+            header("location:index.php?page=tampil_user");
           ob_end_flush();
         }
 

@@ -72,7 +72,6 @@ include "../header.php";
         <td></td>
         <td>Rp. <?php echo $sum;?></td>
         <td></td>
-        <td></td>
     </tr>
                                 </table>
 

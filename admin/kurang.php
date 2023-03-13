@@ -1,5 +1,5 @@
 <?php
-ob_start();
+
 include "../koneksi.php";
 include "../header.php";
 if (isset($_POST['add'])) {
@@ -10,8 +10,9 @@ if (isset($_POST['add'])) {
     $add = "INSERT INTO tb_money_out (name, saldo, description)
     VALUES ('$name', '$input','$information')";
     if ($conn->query($add) === TRUE) {
-   header("location: index.php?page=Pengeluaran");
-   ob_end_flush();
+   echo "<script>
+   document.location.href='index.php?page=Pengeluaran';
+   </script>";
   }
 }
 ?>

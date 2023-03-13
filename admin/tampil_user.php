@@ -3,7 +3,7 @@ include "../koneksi.php";
 include "../header.php";
 ?>
 <?php
-    $result = mysqli_query($conn, 'SELECT SUM(saldo) AS saldo FROM tb_money_out'); 
+    $result = mysqli_query($conn, 'SELECT SUM(saldo) AS saldo FROM tb_addmision_fee'); 
     $row = mysqli_fetch_assoc($result); 
     $sum = $row['saldo'];
 ?>
@@ -32,23 +32,25 @@ include "../header.php";
 
                
                     <div class="card-body pt-5">
-                    <a href="index.php?page=Keluar" class=""><button class="btn btn-primary">Tambahan</button></a> <br><br>
+                    <a href="index.php?page=add_user" class=""><button class="btn btn-primary">Tambah</button></a> <br><br>
                         <div class="table-responsive">
                         <table class="table table-bordered table-info table-striped" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                     <tr>
         <td>NO</td>
         <td>NAMA</td>
-        <td>TANGGAL</td>
-        <td>SALDO</td>
-        <td>KETERANGAN</td>
+        <td>NO HP</td>
+        <td>ALAMAT</td>
+        <td>USERNAME</td>
+        <td>PASSWORD</td>
+        <td>ROLE</td>
         <td>ACTION</td>
     </tr>
                                     </thead>
                                  
                                     <tbody>
                                     <?php
-                    $query = "SELECT * FROM tb_money_out ORDER BY id DESC";
+                    $query = "SELECT * FROM tb_user ORDER BY id DESC";
                     $result= $conn->query($query);
     $data = 1;
     while ($row=$result->fetch_array()){
@@ -56,15 +58,16 @@ include "../header.php";
         ?>
         <tr>
             <td><?php echo $data++;?></td>
-            <td><?php echo $row['name']?></td>
-            <td><?php echo $row['date']?></td>
-            <td>Rp. <?php echo $row['saldo']?></td>
-            <td><?php echo $row['description']?></td>
-            <td><a href="index.php?page=edit_out&id=<?php echo $row['id'];?>"><img src="../image/edit.png" height="30" alt=""></a>
-            <!-- <a href="delet_in.php?id=<?php echo $row['id'];?>"><img src="../image/hapus.png" height="30" alt=""></a> -->
-            <button class="btn" type="button" value="" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $row['id'];?>"><img src="../image/hapus.png" height="30" alt=""></button>
+            <td><?php echo $row['Name']?></td>
+            <td><?php echo $row['No_hp']?></td>
+            <td><?php echo $row['Address']?></td>
+            <td><?php echo $row['Username']?></td>
+            <td><?php echo $row['Password']?></td>
+             <td><?php echo $row['role']?></td>
+            <td><a href="index.php?page=edit_user&id=<?php echo $row['ID'];?>"><img src="../image/edit.png" height="30" alt=""></a>
+            <button class="btn" type="button" value="" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $row['ID'];?>"><img src="../image/hapus.png" height="30" alt=""></button>
 <!-- Modal -->
-<div class="modal fade" id="exampleModal<?php echo $row['id'];?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal<?php echo $row['ID'];?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -76,7 +79,7 @@ include "../header.php";
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-        <a href="delet_out.php?id=<?php echo $row['id'];?>" class="btn btn-primary">Yakin</a>
+        <a href="delet_user.php?id=<?php echo $row['ID'];?>" class="btn btn-primary">Yakin</a>
     </div>
     </div>
   </div>
@@ -90,14 +93,7 @@ include "../header.php";
    
                                      
                                     </tbody>
-                                    <tr>
-        <td>Total :</td>
-        <td></td>
-        <td></td>
-        <td>Rp. <?php echo $sum;?></td>
-        <td></td>
-        <td></td>
-    </tr>
+                                 
                                 </table>
 
            

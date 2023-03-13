@@ -48,7 +48,7 @@ include "../header.php";
                                  
                                     <tbody>
                                     <?php
-                    $query = "SELECT * FROM tb_addmision_fee";
+                    $query = "SELECT * FROM tb_addmision_fee ORDER BY id DESC";
                     $result= $conn->query($query);
     $data = 1;
     while ($row=$result->fetch_array()){

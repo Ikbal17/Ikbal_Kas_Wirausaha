@@ -3,6 +3,9 @@ include "../koneksi.php";
 include "../header.php";
 
 ?>
+<?php
+
+?>
 <link rel="stylesheet" href="../style.css" type="text/css">
 
 <?php
@@ -17,11 +20,18 @@ include "../header.php";
 ?>
 
 <br>
-<button class="btn btn-success  " onclick="printDiv('print')" type="submit" data-toggle="print" data-placement="right" title="print"><i class='bx bx-printer'>Print</i></button>
+<button class="btn btn-success  d-inline" onclick="printDiv('print')" type="submit" data-toggle="print" data-placement="right" title="print"><i class='bx bx-printer'>Print</i></button>
 
+<!-- input search -->
+<form action="" method="get" style="display: inline;">
+<input  type="text" name="page" value="saldo" hidden>
+    <input placeholder="bulan" type="number" min="1" max="12" name="bulan" class="border border-2 rounded-2">
+    <input placeholder="tahun" type="number" min="2022" max="" name="tahun" class="border border-2 rounded-2">
+    <input type="submit" name="search" value="search" hidden>
+</form>
 <div class="row pt-5" id="print" >
     <div class="col-lg-6 ">
-      <table class="table table-striped table-hover table-primary m-1">
+      <table class="table table-bordered table-hover m-1">
         <tr>
             <th>NO</th>
             <th>NAMA</th>
@@ -29,10 +39,17 @@ include "../header.php";
             <th>SALDO</th>
             <th>KETERANGAN</th>
         </tr>
+        <!--Query Search 1  -->
         <?php
-        
+        if (isset($_GET["search"])) {
+            $bulan= $_GET["bulan"];
+            $tahun= $_GET["tahun"];
+            $query= "SELECT * FROM tb_addmision_fee WHERE MONTH(date)='$bulan' AND YEAR(date)='$tahun'" ;
+            $result= $conn->query($query);
+        }else{
             $query = "SELECT * FROM tb_addmision_fee";
             $result= $conn->query($query);
+        }
         $data = 1;
         while ($row=$result->fetch_assoc()){
             
@@ -41,7 +58,7 @@ include "../header.php";
                 <td><?php echo $data++;?></td>
                 <td><?php echo $row['name']?></td>
                 <td><?php echo $row['date']?></td>
-                <td>Rp. <?php echo $row['saldo']?></td>
+                <td><?php echo $row['saldo']?></td>
                 <td><?php echo $row['description']?></td>
             </tr>
     <?php
@@ -51,7 +68,7 @@ include "../header.php";
             <th>Total:</th>
             <td></td>
             <td></td>
-            <th>Rp. <?php echo $sum1?></th>
+            <th><?php echo $sum1?></th>
             <td></td>
         </tr>
     </table>
@@ -65,7 +82,7 @@ include "../header.php";
 
         <div class="col-lg-6 ">
        
-        <table class="table table-striped table-hover table-success m-1">
+        <table class="table table-bordered table-hover m-1">
         <tr>
             <th>NO</th>
             <th>NAMA</th>
@@ -73,10 +90,18 @@ include "../header.php";
             <th>SALDO</th>
             <th>KETERANGAN</th>
         </tr>
+        <!-- Query Search 2 -->
         <?php
-         
+         if (isset($_GET["search"])) {
+            $bulan= $_GET["bulan"];
+            $tahun= $_GET["tahun"];
+            $query2= "SELECT * FROM tb_money_out WHERE MONTH(date)='$bulan' AND YEAR(date)='$tahun'" ;
+            $result2= $conn->query($query2);
+        }else{
             $query2 = "SELECT * FROM tb_money_out";
             $result2= $conn->query($query2);
+        }
+           
         $data = 1;
         while ($row=$result2->fetch_assoc()){
             
@@ -85,7 +110,7 @@ include "../header.php";
                 <td><?php echo $data++;?></td>
                 <td><?php echo $row['name']?></td>
                 <td><?php echo $row['date']?></td>
-                <td>Rp. <?php echo $row['saldo']?></td>
+                <td><?php echo $row['saldo']?></td>
                 <td><?php echo $row['description']?></td>
             </tr>
     <?php
@@ -95,7 +120,7 @@ include "../header.php";
             <th>Total:</th>
             <td></td>
             <td></td>
-            <th>Rp. <?php echo $sum2?></th>
+            <th><?php echo $sum2?></th>
             <td></td>
         </tr>
     </table>
